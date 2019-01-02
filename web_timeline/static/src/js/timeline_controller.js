@@ -265,10 +265,10 @@ odoo.define('web_timeline.TimelineController', function (require) {
                 default_context['default_'.concat(this.date_delay)] = 1;
             }
             if (this.date_start) {
-                default_context['default_'.concat(this.date_start)] = moment(item.start).add(1, 'hours').toDate();
+                default_context['default_'.concat(this.date_start)] = moment(item.start).toDate();
             }
             if (this.date_stop && item.end) {
-                default_context['default_'.concat(this.date_stop)] = moment(item.end).add(1, 'hours').toDate();
+                default_context['default_'.concat(this.date_stop)] = moment(item.end).toDate();
             }
             if (item.group > 0) {
                 default_context['default_'.concat(this.renderer.last_group_bys[0])] = item.group;
