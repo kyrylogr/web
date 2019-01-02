@@ -117,7 +117,12 @@ odoo.define('web_timeline.TimelineView', function (require) {
                 selectable: true,
                 multiselect: true,
                 showCurrentTime: true,
-                zoomKey: this.zoomKey
+                zoomKey: this.zoomKey,
+                margin: {
+                    item: {
+                        horizontal: -1
+                    }
+                }
             };
             if (isNullOrUndef(attrs.event_open_popup) || !_.str.toBoolElse(attrs.event_open_popup, true)) {
                 this.open_popup_action = false;
